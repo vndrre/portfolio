@@ -4,9 +4,9 @@ const NavBar = () => {
 
     let Links = [
         {name:"HOME PAGE", link:"/"},
+        {name:"ABOUT", link:"/about"},
         {name:"SERVICES", link:"/services"},
         {name:"WORK", link:"/work"},
-        {name:"ABOUT", link:"/about"},
     ]
     
   return (

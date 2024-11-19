@@ -58,7 +58,7 @@ const LetsTalk = () => {
           <div className='text-center grid grid-col-start-1 gap-2 py-[150px]'>
             <p className='text-sm font-light'>PROJECT IN MIND?</p>
 
-            <h1 className='text-4xl py-2'>
+            <h1 className='text-4xl md:text-5xl py-2'>
               Let's Make Your <br /> <span className='italic'> Website Shine </span>
             </h1>
 

@@ -1,12 +1,13 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import HomePage from './views/HomePage'
 import Services from './views/Services'
 import Work from './views/Work'
 import About from './views/About'
 import Blog from './views/Blog'
 import Contact from './views/Contact'
-import ProjectView from './views/ProjectView'
+import ProjectView from './views/projects/ProjectView'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
             <Route path='/about' element={ <About /> } />
             <Route path='/blog' element={ <Blog /> } />
             <Route path='/contact' element={ <Contact /> } />
-            <Route path='/projectview' element={ <ProjectView /> } />
+            <Route path="/projectview/:id" element={<ProjectView />} />
           </Routes>
         </BrowserRouter>
       </div>

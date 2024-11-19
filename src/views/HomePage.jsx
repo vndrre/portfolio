@@ -3,11 +3,12 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import LandingPage from '../components/homepage-components/LandingPage'
 import Skills from '../components/homepage-components/Skills'
-import ExampleWork from '../components/homepage-components/ExampleWork'
+import PreviousWork from '../components/homepage-components/ExampleWork'
 import LetsTalk from '../components/homepage-components/LetsTalk'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 import MobileNavBar from '../components/MobileNavBar'
+
 
 const HomePage = () => {
   return (
@@ -22,10 +23,7 @@ const HomePage = () => {
 
       <LandingPage />
       <Skills />
-      
-      <div className='hidden md:hidden lg:block'>
-        <ExampleWork />
-      </div>
+      <PreviousWork />
       <LetsTalk />
       <ScrollToTop />
       <Footer />
