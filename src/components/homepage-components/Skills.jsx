@@ -25,7 +25,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg shadow-md flex flex-col items-center hover:shadow-lg transition-shadow duration-300"
+              className="bg-[#DAC5A7] bg-opacity-5 p-6 rounded-lg shadow-md flex flex-col items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1.5, delay: index * 0.2 }}

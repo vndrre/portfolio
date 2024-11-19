@@ -32,7 +32,7 @@ const ProjectCard = ({ project, isInView, index }) => {
             href={project.destination}
             className="py-3 px-5 font-normal bg-opacity-50 hover:bg-[#DAC5A7] hover:text-black bg-[#272420] text-[#DAC5A7] border-[#DAC5A7] border-[1px] duration-200 rounded-full"
           >
-            {project.button}
+            View Project
           </a>
         </div>
       </div>
