@@ -41,7 +41,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="font-satoshi text-[#DAC5A7] bg-gradient-to-b from-[#151414] to-[#121110] h-full">
+    <div className="font-satoshi text-[#DAC5A7] bg-gradient-to-b from-[#151414] to-[#121110] min-h-screen">
       <div className='lg:flex lg:justify-center'>
         <NavBar />
       </div>
