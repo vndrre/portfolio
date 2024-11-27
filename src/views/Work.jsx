@@ -8,7 +8,7 @@ import ScrollToTop from '../components/ScrollToTop'
 
 const Work = () => {
   return (
-    <div className='font-satoshi text-[#DAC5A7] bg-gradient-to-b from-[#151414] to-[#121110]'>
+    <div className='font-satoshi text-[#DAC5A7] bg-gradient-to-b from-[#151414] to-[#121110] h-full'>
       <div className='lg:flex lg:justify-center'>
         <NavBar />
       </div>

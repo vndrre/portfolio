@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar'
 
 const Blog = () => {
   return (
-    <div className='font-satoshi text-[#DAC5A7] bg-[#151414] h-screen'>
+    <div className='font-satoshi text-[#DAC5A7] bg-[#151414] h-full'>
       <NavBar />
     </div>
   )

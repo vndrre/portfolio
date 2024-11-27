@@ -117,7 +117,7 @@ const ProjectView = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen font-satoshi text-[#DAC5A7] bg-gradient-to-b from-[#151414] to-[#121110] flex items-center justify-center">
+      <div className="min-h-screen font-satoshi text-[#DAC5A7] bg-gradient-to-b from-[#151414] to-[#121110] h-full flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-4xl mb-4">Project Not Found</h2>
           <p className="opacity-75">The project you're looking for doesn't exist.</p>
