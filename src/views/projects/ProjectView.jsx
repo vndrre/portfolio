@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import { 
   Github, 
   ExternalLink, 
-  Code, 
-  Layers, 
-  Target 
+  Code 
 } from 'lucide-react';
 
 import NavBar from "../../components/NavBar";
@@ -17,103 +15,61 @@ import ScrollToTop from "../../components/ScrollToTop";
 const projects = [
   {
     id: 1,
-    title: "Project 1",
-    description: "A web application built using React.js and Tailwind CSS.",
-    technologies: ["React.js", "Tailwind CSS", "Framer Motion"],
+    title: "Gran Turismo Website",
+    year: 2023,
+    description: "A promotional website for the movie Gran Turismo (2023), built using HTML and CSS.",
+    technologies: ["HTML", "CSS"],
     image: "https://picsum.photos/400/250",
-    detailedDescription: "This is a more detailed view of Project 1. It highlights all the features, challenges, and outcomes of the project.",
-    challenges: [
-      "Complex state management",
-      "Real-time data synchronization",
-      "Performance optimization"
-    ],
-    features: [
-      "Responsive design",
-      "Authentication system",
-      "Dynamic data rendering"
-    ],
+    starr: {
+      situation: "The goal was to create a website for the movie Gran Turismo (2023) as part of an introductory web development course.",
+      task: "Develop a functional, mobile-optimized website with movie-related content, adhering to good design and coding practices.",
+      action: "Designed prototypes, developed the mobile and desktop versions, optimized performance, and deployed the site to a live server.",
+      results: "Delivered a functional, visually appealing, and user-friendly website within the timeline.",
+      reflection: "Improved teamwork, communication skills, and technical expertise in HTML and CSS. Learned the importance of clean code and efficient planning."
+    },
     github: "https://github.com/",
-    live: "/",
-    challenges: [
-      "Implementing complex state management",
-      "Ensuring cross-browser compatibility",
-      "Optimizing performance for large datasets"
-    ],
-    learnings: [
-      "Advanced React hooks",
-      "Firebase integration",
-      "Responsive design techniques"
-    ]
+    live: "/"
   },
-
   {
     id: 2,
-    title: "Project 2",
-    description: "A web application built using React.js and Tailwind CSS.",
-    technologies: ["React.js", "Tailwind CSS", "Framer Motion"],
+    title: "Design Equipment Renting App",
+    year: 2024,
+    description: "A web application to manage equipment rentals for a design department.",
+    technologies: ["ASP.NET", "MySQL", "Figma"],
     image: "https://picsum.photos/400/250",
-    detailedDescription: "This is a more detailed view of Project 1. It highlights all the features, challenges, and outcomes of the project.",
-    challenges: [
-      "Complex state management",
-      "Real-time data synchronization",
-      "Performance optimization"
-    ],
-    features: [
-      "Responsive design",
-      "Authentication system",
-      "Dynamic data rendering"
-    ],
-    github: "https://github.com/",
-    live: "/",
-    challenges: [
-      "Implementing complex state management",
-      "Ensuring cross-browser compatibility",
-      "Optimizing performance for large datasets"
-    ],
-    learnings: [
-      "Advanced React hooks",
-      "Firebase integration",
-      "Responsive design techniques"
-    ]
+    starr: {
+      situation: "Create an app to track and manage equipment rentals with features like barcode scanning and color-coded inventory statuses.",
+      task: "Develop a user-friendly application with a mobile and desktop view, integrated with a database for rental history.",
+      action: "Collaborated on UI/UX design, implemented database integration, and added functionality for barcode scanning and inventory tracking.",
+      results: "Successfully delivered the app with functional design and database integration. Addressed feedback with iterative improvements.",
+      reflection: "Gained hands-on experience in database management and ASP.NET development. Identified the need for more robust testing."
+    },
+    github: "https://github.com/JaanikaT/Design_Equipment_Rent",
+    live: "/"
   },
-
   {
     id: 3,
-    title: "Project 3",
-    description: "A web application built using React.js and Tailwind CSS.",
-    technologies: ["React.js", "Tailwind CSS", "Framer Motion"],
+    title: "Queen Band Website",
+    year: 2024,
+    description: "A multi-section website dedicated to the legendary band Queen.",
+    technologies: ["Figma", "GitHub", "Vercel"],
     image: "https://picsum.photos/400/250",
-    detailedDescription: "This is a more detailed view of Project 1. It highlights all the features, challenges, and outcomes of the project.",
-    challenges: [
-      "Complex state management",
-      "Real-time data synchronization",
-      "Performance optimization"
-    ],
-    features: [
-      "Responsive design",
-      "Authentication system",
-      "Dynamic data rendering"
-    ],
+    starr: {
+      situation: "Develop a website for the band Queen, including sections like Home, About, Music, and Fun Facts.",
+      task: "Design and implement a responsive website with clear navigation and engaging content.",
+      action: "Assigned team roles, designed the layout in Figma, developed the site using collaborative tools, and deployed it on Vercel.",
+      results: "Delivered a responsive and functional website. Team members enhanced their skills in design and development.",
+      reflection: "Learned the value of precise task allocation and effective communication in team settings. Improved GitHub project management skills."
+    },
     github: "https://github.com/",
-    live: "/",
-    challenges: [
-      "Implementing complex state management",
-      "Ensuring cross-browser compatibility",
-      "Optimizing performance for large datasets"
-    ],
-    learnings: [
-      "Advanced React hooks",
-      "Firebase integration",
-      "Responsive design techniques"
-    ]
-  },
-  // ... other projects (similar structure)
+    live: "/"
+  }
 ];
 
 const ProjectView = () => {
   const { id } = useParams();
   const project = projects.find((p) => p.id === parseInt(id));
-  const [activeTab, setActiveTab] = useState('description');
+  const [activeTab, setActiveTab] = useState('situation');
 
   if (!project) {
     return (
@@ -127,48 +83,12 @@ const ProjectView = () => {
   }
 
   const renderTabContent = () => {
-    switch(activeTab) {
-      case 'description':
-        return (
-          <div className="space-y-4">
-            <p className="text-lg opacity-75">{project.detailedDescription}</p>
-          </div>
-        );
-      case 'challenges':
-        return (
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-2">Project Challenges</h3>
-            <ul className="space-y-2">
-              {project.challenges.map((challenge, index) => (
-                <li 
-                  key={index} 
-                  className="bg-[#DAC5A7] bg-opacity-5 py-2 px-4 rounded-full"
-                >
-                  {challenge}
-                </li>
-              ))}
-            </ul>
-          </div>
-        );
-      case 'learnings':
-        return (
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-2">Key Learnings</h3>
-            <ul className="space-y-2">
-              {project.learnings.map((learning, index) => (
-                <li 
-                  key={index} 
-                  className="bg-[#DAC5A7] bg-opacity-5 py-2 px-4 rounded-full"
-                >
-                  {learning}
-                </li>
-              ))}
-            </ul>
-          </div>
-        );
-      default:
-        return null;
-    }
+    return (
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold mb-2 capitalize">{activeTab}</h3>
+        <p className="text-lg opacity-75">{project.starr[activeTab]}</p>
+      </div>
+    );
   };
 
   return (
@@ -187,6 +107,7 @@ const ProjectView = () => {
         <div className="lg:mb-[50px]">
           <h2 className="text-5xl italic text-center mb-4">{project.title}</h2>
           <hr className="border border-[#DAC5A7] border-opacity-50 mx-[70px] md:mx-[200px] lg:mx-[750px] my-[20px]"/>
+          <p className="text-center text-2xl italic mb-10 md:mb-10 lg:mb-0"> {project.year} </p>
         </div>
       
         <div className="lg:flex items-center lg:mx-[200px] lg:gap-20 space-y-8 lg:space-y-0">
@@ -216,7 +137,7 @@ const ProjectView = () => {
 
             {/* Tab Navigation */}
             <div className="grid grid-cols-1 md:grid-cols-1 gap-2 lg:flex lg:justify-center lg:space-x-4 mb-6">
-              {['description', 'challenges', 'learnings'].map((tab) => (
+              {Object.keys(project.starr).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
