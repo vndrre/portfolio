@@ -8,6 +8,7 @@ import About from './views/About'
 import Blog from './views/Blog'
 import Contact from './views/Contact'
 import ProjectView from './views/projects/ProjectView'
+import CVpage from './views/CVpage'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/blog' element={ <Blog /> } />
             <Route path='/contact' element={ <Contact /> } />
             <Route path="/projectview/:id" element={<ProjectView />} />
+            <Route path="/cv" element={ <CVpage /> } />
           </Routes>
         </BrowserRouter>
       </div>

@@ -7,6 +7,7 @@ const NavBar = () => {
         {name:"ABOUT", link:"/about"},
         {name:"SERVICES", link:"/services"},
         {name:"WORK", link:"/work"},
+        {name:"CV", link:"/cv"},
     ]
     
   return (

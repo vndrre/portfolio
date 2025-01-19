@@ -59,7 +59,7 @@ const AboutPage = () => {
         {/* Header Section */}
         <header className="p-12 text-center">
           <h1 className="text-5xl mb-4 tracking-tight">
-            Hello, I'm <span className='italic'>vndre.</span>
+            Hello, I'm <span className='italic'>Andre</span>
           </h1>
           <hr className='border border-[#DAC5A7] border-opacity-50 lg:mx-[555px] mx-[50px] md:mx-[125px] mt-[25px] mb-[10px]'/>
 
