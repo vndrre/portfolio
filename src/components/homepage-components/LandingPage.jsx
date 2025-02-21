@@ -10,7 +10,7 @@ const LandingPage = () => {
     <div>
       <div ref={ref} className="lg:grid lg:place-items-center md:hidden hidden">
         <motion.div
-          className="grid grid-cols-1 gap-10 text-center lg:mt-[315px] font-light"
+          className="grid grid-cols-1 gap-10 text-center lg:mt-[265px] font-light"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
