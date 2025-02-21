@@ -103,12 +103,15 @@ const Services = () => {
       {/* Header */}
       <div className="mt-[100px] md:mt-[110px] lg:mt-[170px]">
         <header className="p-12 text-center">
-          <h1 className="text-5xl mb-4 tracking-tight">
+          <h1 className="text-5xl mb-4 tracking-tight
+          animate-fade-up animate-once animate-duration-[750ms] animate-delay-100 animate-normal">
             My <span className='italic'>Services</span>
           </h1>
-          <hr className='border border-[#DAC5A7] border-opacity-50 lg:mx-[555px] mx-[50px] md:mx-[125px] mt-[25px] mb-[10px]'/>
+          <hr className='border border-[#DAC5A7] border-opacity-50 lg:mx-[555px] mx-[50px] md:mx-[125px] mt-[25px] mb-[10px]
+          animate-fade-up animate-once animate-duration-[500ms] animate-delay-100 animate-normal'/>
 
-          <p className="text-2xl max-w-2xl mx-auto opacity-75">
+          <p className="text-2xl max-w-2xl mx-auto opacity-75
+          animate-fade-up animate-once animate-duration-[850ms] animate-delay-100 animate-normal">
             Transforming Ideas into Digital Experiences
           </p>
         </header>

@@ -10,5 +10,7 @@ export default {
       satoshi: ['Satoshi', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated'),
+  ],
 }

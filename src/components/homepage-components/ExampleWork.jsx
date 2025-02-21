@@ -38,8 +38,12 @@ const ExampleWork = () => {
 
   return (
     <section className="font-satoshi lg:px-[250px] lg:py-[100px]" ref={ref} id="#examplework">
-      <h2 className="text-5xl italic text-center mt-[100px]">Previous Work</h2>
-      <hr className="border border-[#DAC5A7] border-opacity-50 lg:mx-[400px] mx-[50px] md:mx-[125px] mt-[25px] mb-[50px]" />
+      <h2 className="text-5xl italic text-center mt-[100px]
+      animate-fade-up animate-once animate-duration-[750ms] animate-delay-100 animate-normal">
+        Previous Work
+      </h2>
+      <hr className="border border-[#DAC5A7] border-opacity-50 lg:mx-[400px] mx-[50px] md:mx-[125px] mt-[25px] mb-[50px]
+      animate-fade-up animate-once animate-duration-[500ms] animate-delay-100 animate-normal" />
       <div className="lg:mx-auto mx-[45px] md:mx-[175px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 ">
         {projects.map((project, index) => (
           <ProjectCard

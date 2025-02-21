@@ -21,14 +21,17 @@ const Contact = () => {
 
       {/* Hero Section */}
       <header className="mt-[100px] md:mt-[110px] lg:mt-[170px] text-center px-4">
-        <h1 className="text-5xl font-bold mb-4 text-gradient">
+        <h1 className="text-5xl font-bold mb-4 text-gradient
+        animate-fade-up animate-once animate-duration-[750ms] animate-delay-100 animate-normal">
           Let’s Collaborate!
         </h1>
-        <p className="text-lg text-opacity-80 max-w-lg mx-auto">
+        <p className="text-lg text-opacity-80 max-w-lg mx-auto
+        animate-fade-up animate-once animate-duration-[850ms] animate-delay-100 animate-normal">
           Have a project in mind? I’m just a message away!
         </p>
 
-        <hr className='border border-[#DAC5A7] border-opacity-50 lg:mx-[575px] mx-[50px] md:mx-[125px] mt-[25px] mb-[10px]'/>
+        <hr className='border border-[#DAC5A7] border-opacity-50 lg:mx-[575px] mx-[50px] md:mx-[125px] mt-[25px] mb-[10px]
+        animate-fade-up animate-once animate-duration-[500ms] animate-delay-100 animate-normal'/>
       </header>
 
       {/* Contact Form */}
