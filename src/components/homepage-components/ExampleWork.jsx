@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ProjectCard from "../ProjectCard";
+import Cube from "./hp-3d-comps/Cube";
+import WorkCube from "./hp-3d-comps/WorkCube";
 
 const projects = [
   {
@@ -38,13 +40,17 @@ const ExampleWork = () => {
 
   return (
     <section className="font-satoshi lg:px-[250px] lg:py-[100px]" ref={ref} id="#examplework">
+      <div className="mt-10 opacity-[40%]">
+        <WorkCube /> 
+      </div>
+
       <h2 className="text-5xl italic text-center mt-[100px]
       animate-fade-up animate-once animate-duration-[750ms] animate-delay-100 animate-normal">
         Previous Work
       </h2>
       <hr className="border border-[#DAC5A7] border-opacity-50 lg:mx-[400px] mx-[50px] md:mx-[125px] mt-[25px] mb-[50px]
       animate-fade-up animate-once animate-duration-[500ms] animate-delay-100 animate-normal" />
-      <div className="lg:mx-auto mx-[45px] md:mx-[175px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 ">
+      <div className="lg:mx-auto mx-[45px] md:mx-[175px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 z-50 ">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.id}
@@ -53,6 +59,10 @@ const ExampleWork = () => {
             index={index}
           />
         ))}
+      </div>
+
+      <div className="ml-[1200px] mt-36 opacity-[40%]">
+        <Cube />
       </div>
     </section>
   );

@@ -15,7 +15,8 @@ import NavBar from '../components/NavBar';
 import MobileNavBar from '../components/MobileNavBar';
 import LetsTalk from '../components/homepage-components/LetsTalk';
 import Footer from '../components/Footer';
-import ScrollToTop from '../components/ScrollToTop'
+import ScrollToTop from '../components/ScrollToTop';
+import RightCube from '../components/3d-components/RightCube';
 
 const Services = () => {
   const [activeService, setActiveService] = useState(null);
@@ -98,6 +99,11 @@ const Services = () => {
 
       <div className='flex md:flex lg:hidden'>
         <MobileNavBar />
+      </div>
+
+      
+      <div className='mt-[200px] opacity-[40%]'>
+        <RightCube />
       </div>
 
       {/* Header */}

@@ -11,7 +11,7 @@ const NavBar = () => {
     ]
     
   return (
-    <div className='fixed top-10 z-50 lg:flex md:hidden hidden bg-[#080808] bg-opacity-25 backdrop-blur-sm font-satoshi text-[#DAC5A7] mx-auto py-[15px] px-[25px] rounded-full border-[1px] border-white border-opacity-15'>
+    <div className='fixed top-10 z-[999] lg:flex md:hidden hidden bg-[#080808] bg-opacity-25 backdrop-blur-sm font-satoshi text-[#DAC5A7] mx-auto py-[15px] px-[25px] rounded-full border-[1px] border-white border-opacity-15'>
         <div className='flex items-center gap-7'>
             <div>
                 <a href="/" className='text-2xl hover:opacity-75 duration-200'>vndre.</a>

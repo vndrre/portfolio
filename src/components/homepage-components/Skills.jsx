@@ -3,6 +3,7 @@ import { FaReact, FaVuejs } from "react-icons/fa";
 import { LuFigma } from "react-icons/lu";
 import { SiTailwindcss } from "react-icons/si";
 import { motion, useInView } from "framer-motion";
+import SkillsCube from "./hp-3d-comps/SkillsCube";
 
 const skills = [
   { name: "React.js", category: "Web Development", icon: <FaReact /> },
@@ -13,11 +14,16 @@ const skills = [
 
 const Skills = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // Trigger animation only once when in view
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="font-satoshi lg:px-[250px] lg:py-[100px] lg:mt-[250px]">
-      <div className="lg:block md:hidden hidden">
+    <section ref={ref} className="relative font-satoshi lg:px-[250px] lg:py-[100px] lg:mt-[250px]">
+
+      <div className="mt-10 opacity-[40%]">
+        <SkillsCube />
+      </div>
+
+      <div className="lg:block md:hidden hidden relative">
         <h2 className="text-5xl italic text-center">SKILLS</h2>
         <hr className="border border-[#DAC5A7] border-opacity-50 mx-[530px] mt-[25px] mb-[50px]" />
 
@@ -36,23 +42,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-      </div>
-
-      <div className="block md:block lg:hidden mt-[180px] py-[100px]">
-          <div className="text-center">
-            <h2 className="text-3xl">SKILLS</h2>
-            <hr className="border border-[#DAC5A7] border-opacity-50 mx-[50px] my-[25px]"/>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 px-[25px] md:px-[100px] mt-[50px]">
-            {skills.map((skill, index) =>(
-              <div className="bg-white bg-opacity-10 md:h-[200px] backdrop-blur-sm rounded-lg flex flex-col items-center py-[25px]">
-                <div className="text-2xl"> {skill.icon} </div>
-                <h3 className="text-xl"> {skill.name} </h3>
-                <p className="text-sm italic"> {skill.category} </p>
-              </div>
-            ))}
-          </div>
       </div>
     </section>
   );
